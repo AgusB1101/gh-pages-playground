@@ -21,9 +21,16 @@ jobs:
       - run: npm run test
 
       - name: Deploy to Github Pages
+<<<<<<< HEAD
         uses: actions/setup-node@v1
         with:
           node-version: 18.17.0
       - run: npm run deploy
+=======
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: build
+>>>>>>> 78238e9b4b0a4ae134c9e0323938880178a351c4
         env:
           GITHUB_TOKEN: ${{ secrets.MY_REPO_TOKEN }}
